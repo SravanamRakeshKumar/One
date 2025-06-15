@@ -70,7 +70,7 @@ function Offline()
         description: "Test Transaction",
         order_id: order.id,
         handler: async function () { 	 //it is activate after payment is done
-          window.location.href="http://localhost:3000/home";  //relocate the homepage 
+          window.location.href="/home";  //relocate the homepage 
           alert("✅ Payment send Successful!seats are booking"); //conformation purpose
            const data=axios.patch(`${API_URL}/movies/${movie_details.id}`, 
             {

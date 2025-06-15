@@ -19,7 +19,7 @@ function Homepage()
 
     useEffect(()=>
     {
-        fetch(`${API_URL}/movies`)
+        fetch(`${API_URL}movies`)
         .then(res =>res.json())
         .then( data => 
             {

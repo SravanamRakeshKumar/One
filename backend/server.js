@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const Razorpay = require('razorpay');
 const movies = require("./movies.json");
 const app = express();
+const MONGODB_CLOUD_URL=process.env.MONGODB_URI;
 
 require("dotenv").config();
 
@@ -16,7 +17,7 @@ app.get("/movies", (req, res) => {
   res.json(movies);
 });
 
-mongoose.connect('mongodb://localhost:27017/HomeTheatre')
+mongoose.connect(MONGODB_CLOUD_URL)
 .then(() => {
   console.log("✅ MongoDB Connected");
 }).catch((err) => {
