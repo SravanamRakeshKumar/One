@@ -9,6 +9,8 @@ function Signup()
   let [password,setPassword] = useState('');
   let [conformpassword,setConformPassword] = useState('');
   let navigate = useNavigate();
+  const API_URL = process.env.REACT_APP_API_URL;
+
 
 
     async function Add(event) {
@@ -18,7 +20,7 @@ function Signup()
        {
         try 
         {
-          const responce= await axios.post("http://localhost:5000/signup",{
+          const responce= await axios.post(`${API_URL}/signup`,{
              username:username,
              password:password
             });

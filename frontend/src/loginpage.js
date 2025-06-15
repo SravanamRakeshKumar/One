@@ -7,6 +7,9 @@ function Loginpage()   //  name--> name:'rakesh'
 
   let [username,setUsername] = useState('');
   let [password,setPassword] = useState('');
+  const API_URL = process.env.REACT_APP_API_URL;
+
+  
 
   // let [login,setLogin]= useState(false);
   let navigate = useNavigate();
@@ -16,7 +19,7 @@ function Loginpage()   //  name--> name:'rakesh'
 async function Add(event) {
   event.preventDefault();
   try {
-  const response = await axios.post("http://localhost:5000/login", {
+  const response = await axios.post(`${API_URL}/login`, {
     username:username,
     password:password
   });

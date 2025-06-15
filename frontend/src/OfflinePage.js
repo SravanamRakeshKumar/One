@@ -9,6 +9,8 @@ function Offline()
   let [count,setCount]=useState(0);
   let [total,setTotal]=useState(0);
   let [seats,setSeats] = useState([]);
+    const API_URL = process.env.REACT_APP_API_URL;
+
    
     useEffect(()=>
     {
@@ -56,7 +58,7 @@ function Offline()
 
 
 
-      const { data: order } = await axios.post("http://localhost:5000/api/create-order", {
+      const { data: order } = await axios.post(`${API_URL}/api/create-order`, {
                   amount: total,
                 });
 
@@ -70,7 +72,7 @@ function Offline()
         handler: async function () { 	 //it is activate after payment is done
           window.location.href="http://localhost:3000/home";  //relocate the homepage 
           alert("✅ Payment send Successful!seats are booking"); //conformation purpose
-           const data=axios.patch(`http://localhost:5000/movies/${movie_details.id}`, 
+           const data=axios.patch(`${API_URL}/movies/${movie_details.id}`, 
             {
                   seats_booked: seats,  //updated seats_booked property
           }

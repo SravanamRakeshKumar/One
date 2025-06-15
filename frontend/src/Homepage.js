@@ -13,11 +13,13 @@ function Homepage()
     let [zoner,setZoner]=useState('');
     let [rating,setRating]=useState('');
     let [director,setDirector]=useState('');
+    const API_URL = process.env.REACT_APP_API_URL;
+
 
 
     useEffect(()=>
     {
-        fetch("http://localhost:5000/movies")
+        fetch(`${API_URL}/movies`)
         .then(res =>res.json())
         .then( data => 
             {
