@@ -4,14 +4,20 @@ const mongoose = require('mongoose');
 const Razorpay = require('razorpay');
 const movies = require("./movies.json");
 const app = express();
+require("dotenv").config();
+
 const MONGODB_CLOUD_URL=process.env.MONGODB_URI;
 
-require("dotenv").config();
 
 const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.send("Server is working fine 🎉");
+});
+
 
 app.get("/movies", (req, res) => {
   res.json(movies);
