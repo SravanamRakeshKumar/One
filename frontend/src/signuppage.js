@@ -20,7 +20,7 @@ function Signup()
        {
         try 
         {
-          const responce= await axios.post(`${API_URL}/signup`,{
+          const responce= await axios.post(`${API_URL}signup`,{
              username:username,
              password:password
             });

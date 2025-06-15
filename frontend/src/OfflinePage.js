@@ -58,7 +58,7 @@ function Offline()
 
 
 
-      const { data: order } = await axios.post(`${API_URL}/api/create-order`, {
+      const { data: order } = await axios.post(`${API_URL}api/create-order`, {
                   amount: total,
                 });
 

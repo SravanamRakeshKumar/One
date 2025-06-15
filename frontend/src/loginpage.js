@@ -19,7 +19,7 @@ function Loginpage()   //  name--> name:'rakesh'
 async function Add(event) {
   event.preventDefault();
   try {
-  const response = await axios.post(`${API_URL}/login`, {
+  const response = await axios.post(`${API_URL}login`, {
     username:username,
     password:password
   });
