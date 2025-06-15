@@ -1,0 +1,457 @@
+/* Reset & font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+#homeheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 2%;
+  /* flex-wrap: wrap; */
+  background-color: #1f1f1f;
+  /* background-color:darkblue; */
+  color: white;
+  position: sticky;
+  gap: 15px;
+  height: 80px;
+  z-index: 200;
+  top: 0px;
+}
+#homeheader #logo 
+{
+  position: relative;
+  width:30%;
+  height:80px;
+  /* background-color:yellow; */
+  display: flex;
+  align-items: center;
+}
+#homeheader #search-bar-accont
+{
+  position: relative;
+  width:50%;
+  /* background-color: yellow; */
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  column-gap: 30px;
+}
+#homeheader #logo div:nth-child(1) {
+  position: relative;
+  width:50%;
+  height:110%;
+}
+#homeheader div:nth-child(1) img 
+{
+  margin-top: 13px;
+  position:relative;
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+}
+#homeheader #logo h1 
+{
+  position: relative;
+  left:-45px;
+  color:red;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+#homeheader #logo h1::first-letter
+{
+  font-size: 35px;;
+}
+#homeheader #logo h1  span 
+{
+  color: white;
+}
+
+
+#homeheader form {
+  display: flex;
+  gap: 10px;
+}
+
+#homeheader input[type="text"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  width: 300px;
+}
+
+#homeheader input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #ffd700;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#homeheader input[type="submit"]:hover {
+  background-color: #e5c100;
+}
+
+/* User Avatar */
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  background-color:red;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/020/973/731/non_2x/avatar-gold-icon-illustration-of-golden-particle-background-isolated-sign-symbol-education-icon-black-background-vector.jpg");
+  background-position: center;
+  background-size:100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a1a1a;
+  font-weight: bold;
+  border: 2px solid white;
+}
+
+.user-dropdown {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width:auto;
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  display: none;
+  z-index: 99;
+}
+
+.user-dropdown.show {
+  display: block;
+}
+
+.user-dropdown button {
+  border: none;
+  background: none;
+  padding: 2px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+/* Filters */
+#filters {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 15px 10px;
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  flex-wrap: wrap;
+  gap: 10px;
+  border-bottom: 2px solid #ccc;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+#filters::-webkit-scrollbar {
+  display: none;
+}
+
+.options {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #333;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  min-width: 150px;
+  flex-shrink: 0;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.options:hover {
+  background-color: #f0f8ff;
+}
+
+/* Cards Container */
+#parentStylesObject {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 20px;
+  background-color: #f9f9f9;
+}
+
+/* Card Style */
+#chaildStylesObject {
+  width: 220px;
+  height: 300px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+#chaildStylesObject:hover {
+  transform: scale(1.05);
+}
+
+/* Image Styling */
+#imageStylesObject {
+  width: 100%;
+  height: 80%;
+  /* object-fit: cover; */
+}
+
+/* Button Container */
+#buttons {
+  display: flex;
+  justify-content: space-between;
+  height: 20%;
+}
+
+#buttons a {
+  flex: 1;
+  height: 100%;
+  text-decoration: none;
+}
+
+#buttons a button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#buttons a:nth-child(1) button {
+  background-color: #28a745; /* Green */
+}
+
+#buttons a:nth-child(2) button {
+  background-color: #dc3545; /* Red */
+}
+
+#buttons a button:hover {
+  opacity: 0.85;
+}
+
+@media only screen and (max-width: 768px) {
+  #homeheader {
+    align-items: center;
+    height: auto;
+    padding: 15px 5%;
+    /* background-color: ; */
+    padding:0px 10px;
+  }
+
+  #homeheader #logo {
+    width: 30%;
+    /* height: 100px; */
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    /* background-color: yellow; */
+    /* flex-direction: column; */
+  }
+
+  #homeheader #logo div:nth-child(1),
+  #homeheader #logo img {
+    width: 70px;
+    height: 150px;
+    /* background-color: white; */
+  }
+  
+   #homeheader #logo div:nth-child(1) img
+   {
+        margin-top:5px;
+   }
+
+  #homeheader #logo h1 {
+    text-align: center;
+    font-size: 15px;
+    left:-15px;
+  }
+
+  #homeheader #search-bar-accont {
+    /* flex-direction: column; */
+    width:70%;
+    margin-top: 15px;
+    gap: 10px;
+    align-items: center;
+  }
+
+  #homeheader form {
+    width: 90%;
+  }
+
+  #homeheader input[type="text"] {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+  }
+
+  .user-dropdown {
+    top: 45px;
+    right: 0;
+    transform: translateX(-50%);
+  }
+  #filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+
+  .options {
+    min-width: 180px;
+  }
+   .user-dropdown {
+    right: -30px;
+    top:30px;
+  }
+  #chaildStylesObject {
+    width: 90%;
+    height: 320px;
+  }
+}
+
+
+/* Responsive Design */
+/* @media only screen and (max-width: 600px) {
+  header {
+
+    align-items: center;
+    gap: 10px;
+  }
+
+  header h1 {
+    font-size: 26px;
+  }
+
+  header form {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #chaildStylesObject {
+    width: 90%;
+    height: 320px;
+  }
+
+  #filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+
+  .options {
+    min-width: 180px;
+  }
+
+  .user-dropdown {
+    right: -30px;
+    top:30px;
+  }
+} */
+
+
+
+
+
+ 
+ 
+ /* #chaildStylesObject{
+      width:200px;
+      height:200px;
+      background-color:yellow;
+      color:white;
+      border:5px solid black;
+      position:relative;
+      padding: 0px;
+  }
+#parentStylesObject{
+     position:relative;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-evenly;
+      row-gap:10px;
+  }
+  #imageStylesObject{
+     position:relative;
+      width:100%;
+      height:80%;
+      padding:0px;
+  }
+  #buttons 
+  {
+    height: 20%;
+    background-color: yellow;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+    #buttons a
+  {
+    position:relative;
+    width:50%;
+    height:100%;
+    text-decoration: none;
+  }
+   #buttons a button 
+  {
+    position:relative;
+    width:100%;
+    height:100%;
+  }
+  #buttons a:nth-child(1) button,#buttons a:nth-child(2) button
+  {
+    background-color: green;
+    border:none;
+    color:white;
+    font-weight: bold;
+  }
+  #buttons a:nth-child(2) button
+  {
+    background-color: red;
+  }
+  header ,#filters
+  {
+    position:relative;
+    display: flex;
+    justify-content: space-around;
+    padding:20px 0px;
+    flex-wrap: wrap;
+  }
+  .options
+  {
+    padding:10px 30px;
+  }
+          @media only screen and (max-width: 600px) {
+   #chaildStylesObject{
+    width:80%;
+    height:300px;
+
+   }
+            
+          } */

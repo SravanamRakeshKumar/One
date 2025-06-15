@@ -1,0 +1,359 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Styling */
+#header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #121212;
+  color: white;
+  border-bottom: 3px solid #8a2be2;
+  flex-wrap: wrap;
+  position: sticky;
+  top:0px;
+  z-index: 200;
+}
+
+
+#header h2,
+#header h3 {
+  margin: 5px 10px;
+  font-size: 1.2rem;
+}
+
+#header button {
+  padding: 10px 25px;
+  border: none;
+  outline: none;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#header button:hover {
+  background-color: #0056b3;
+}
+
+/* Info Legend Section */
+#info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  gap: 10px;
+}
+#info p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+#info button {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #333;
+  border-radius: 3px;
+}
+
+#info p:nth-child(1) button {
+  background-color: green;
+}
+
+#info p:nth-child(2) button {
+  background-color: transparent;
+}
+
+#info p:nth-child(3) button {
+  background-color: red;
+}
+
+#info h3{
+    color:black;
+}
+
+/* Movie Hall Container */
+#movie_hall {
+  width: 90%;
+  height: 80dvh;
+  margin: 20px auto;
+  border: 8px solid black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+/* Screen Box */
+#screen {
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+  border: 4px solid #2196f3;
+  text-align: center;
+  transform: skew(-20deg);
+  background-color: #e3f2fd;
+  font-weight: bold;
+  font-size: 1rem;
+  color: black;
+}
+
+/* Seats Section */
+#seats {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px 0;
+  overflow-x: auto;
+}
+
+/* Individual Row */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 5px 10px;
+  min-width: 500px;
+  color: black;
+}
+
+/* Row Label (Fixed on Left) */
+.row h2 {
+  width: 40px;
+  text-align: center;
+  position: sticky;
+  left: 0;
+  background-color: #fff;
+  z-index: 2;
+  font-size: 1rem;
+}
+
+/* Left and Right Sections */
+#part1,
+#part2 {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+#part1 {
+  margin-left: 10px;
+}
+
+#part2 {
+  margin-left: 20px;
+}
+
+/* Seat Buttons */
+#seats button {
+  padding: 10px 15px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  font-size: 0.9rem;
+}
+
+#seats button:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #header {
+    /* flex-direction: column; */
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  #header h2,
+  #header h3 {
+    font-size: 1rem;
+  }
+  #info button 
+  {
+    width:15px;
+    height:10px;
+  }
+  #info h3{
+    font-size: 1rem;
+}
+
+  #movie_hall {
+    width: 95%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    min-width: 100%;
+  }
+
+  #part1,
+  #part2 {
+    flex-wrap: nowrap;
+    gap: 5px;
+  }
+
+  #seats button {
+    padding: 8px 10px;
+    font-size: 0.75rem;
+    margin: 2px;
+  }
+
+  #info {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px;
+  }
+
+  #screen {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+}
+
+
+
+
+/* #header 
+{
+    position:relative;
+    padding:0px 0px;
+
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid violet;
+}
+#header button 
+{
+    padding:10px 20px;
+    outline: none;
+    border: none;
+    background-color: blue;
+    color:white;
+    font-weight: bold;
+    border-radius:10px;
+}
+
+#info 
+{
+    position: relative;
+    margin-top: 5px;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+#info p 
+{
+    position: relative;
+    width:27%;
+    
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    column-gap: 10px;
+}
+#info button 
+{
+    padding:12px;
+    outline: none;
+    border: 1px solid black;
+}
+#info p:nth-child(1) button
+{
+    background-color: green;
+}
+#info p:nth-child(3) button
+{
+    background-color:red;
+}
+#movie_hall 
+{
+    position:relative;
+    width:80%;
+    height:80dvh;
+    border: 10px solid black;
+    margin: 10px auto 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+#movie_hall #screen
+{
+    margin: auto;
+    border:5px solid blue;
+    width:70%;
+    padding:10px;
+    text-align: center;
+    margin-top: 5px;
+    transform:skew(-20deg)
+}
+#movie_hall  #seats
+{
+    position:relative;
+    width:100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+#movie_hall  #seats .row
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+#movie_hall  #seats .row #part1
+{
+    position:relative;
+    display: flex;
+    width:30%;
+
+    justify-content: space-evenly;
+    
+}
+#movie_hall  #seats .row #part1 button,#movie_hall  #seats .row #part2 button
+{
+    position:relative;
+    padding:10px 15px;
+    outline: none;
+    border:1px solid black;
+
+    
+}
+#movie_hall  #seats .row #part2
+{
+    position:relative;
+    display: flex;
+    width:60%;
+
+    justify-content: space-evenly;
+    
+}
+ */

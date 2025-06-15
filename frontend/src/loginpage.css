@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#loginpagesection {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/025/402/562/small_2x/movie-time-3d-render-illustration-cinema-poster-concept-on-color-background-composition-with-popcorn-clapperboard-3d-glasses-and-filmstrip-cinema-banner-design-for-movie-theater-photo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+}
+
+#login {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+  animation: slideInLeft 1s ease-in-out forwards;
+}
+
+#loginpageform {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#loginpageform h1 {
+  font-size: 28px;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  box-shadow: 0 0 5px #ffd700;
+}
+
+input[type="submit"] {
+  background-color: #ffd700;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #e5c100;
+}
+
+p {
+  color: white;
+  margin-top: 15px;
+  font-size: 14px;
+  z-index: 2;
+}
+
+p a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+@keyframes slideInLeft {
+  from 
+            {
+                transform: translateX(-500px);
+            }
+            to 
+            {
+                transform: translateX(150px);
+            }
+        }
+
+/* 📱 Mobile Responsive */
+@media (max-width: 600px) {
+    #loginpagesection
+            {
+                background-image: url("https://wallpapercat.com/w/full/9/b/1/1379499-2048x2048-iphone-hd-movie-theater-background.jpg");
+                justify-content: center;
+            }
+  #login {
+    padding: 20px 15px;
+    margin-bottom: 30px;
+  }
+
+  #loginpageform h1 {
+    font-size: 22px;
+  }
+  @keyframes slideInLeft {
+  from 
+            {
+                transform: translateX(-500px);
+            }
+            to 
+            {
+                transform: translateX(5px);
+            }
+        }
+}
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /* *
+ {
+    padding:0;
+    margin:0;
+ }
+ .heading 
+ {
+    color:blue;
+ }
+    #loginpagesection
+        {
+            width:100dvw;
+            height:100dvh;
+            background-image: url("https://static.vecteezy.com/system/resources/thumbnails/025/402/562/small_2x/movie-time-3d-render-illustration-cinema-poster-concept-on-color-background-composition-with-popcorn-clapperboard-3d-glasses-and-filmstrip-cinema-banner-design-for-movie-theater-photo.jpg");
+            background-repeat: no-repeat;
+            background-size:100% 100%;
+            margin:0;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            
+        } 
+        #login
+        {
+
+            width: 500px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #loginpageform 
+        {
+
+            width:70%;
+            height:200px;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 10px;  
+            animation: move 2s 1;
+        } 
+        @keyframes move {
+            from 
+            {
+                transform: translateX(-500px);
+            }
+            to 
+            {
+                transform: translateY(0px);
+            }
+            
+        }
+        input 
+        {
+            padding:7px;
+        }
+        input[type="submit"]
+        {
+            padding:7px 20px;
+            font-weight: bold;
+        }
+
+        @media only screen and (max-width: 600px) {
+            #loginpagesection
+            {
+                background-image: url("https://wallpapercat.com/w/full/9/b/1/1379499-2048x2048-iphone-hd-movie-theater-background.jpg");
+                justify-content: center;
+            }
+            h1 
+            {
+                text-align: center;
+                color:red;
+            }
+                        #wish 
+            {
+                z-index: 20;
+                font-size: 10px;
+            }
+             @keyframes move {
+            from 
+            {
+                transform: translateY(-500px);
+            }
+            to 
+            {
+                transform: translateY(0px);
+            }
+            
+        }
+            
+
+            
+}
+
+        
+
+     
+      */

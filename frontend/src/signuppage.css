@@ -1,0 +1,272 @@
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#signuppagesection {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://getwallpapers.com/wallpaper/full/f/1/b/375459.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+}
+
+#signuppagesection::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color:black;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+#signup {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  border-radius: 16px;
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+  animation: slideIn 1s ease-in-out;
+}
+
+
+#wish {
+    /* position:absolute; */
+   /* top:0px; */
+  font-size: 28px;
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+#signuppageform {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+#signuppageform input[type="text"],
+#signuppageform input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+#signuppageform input[type="text"]:focus,
+#signuppageform input[type="password"]:focus {
+  box-shadow: 0 0 5px #00ffd5;
+}
+
+input[type="submit"] {
+  background-color: #00ffd5;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #00bba1;
+}
+
+p {
+  color: white;
+  margin-top: 15px;
+  font-size: 14px;
+  z-index: 2;
+}
+
+p a {
+  color: #00ffd5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 600px) {
+  #signup {
+    padding: 20px 15px;
+  }
+
+  #wish {
+    font-size: 22px;
+  }
+}
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /* *
+ {
+    padding:0;
+    margin:0;
+ }
+ .heading 
+ {
+    color:blue;
+ }
+    #signuppagesection
+        {
+            width:100dvw;
+            height:100dvh;
+            background-image: url("https://getwallpapers.com/wallpaper/full/f/1/b/375459.jpg");
+            background-repeat: no-repeat;
+            background-size:100% 100%;
+            margin:0;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            overflow: hidden;
+            
+            
+        } 
+            #signuppagesection::after
+            {
+                content:"";
+                position:absolute;
+                width:100%;
+                height:100%;
+                background-color:black;
+                opacity:0.6;
+                z-index:1;
+            }
+        #login
+        {
+
+            width: 500px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        #signuppageform
+        {
+
+            width:70%;
+            height:200px;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 10px;  
+            animation: move2 2s 1;
+            border:5px solid white;
+            z-index: 20;
+
+        } 
+        h1 
+        {
+            color:white;
+        }
+        #wish
+        {
+            font-size: 50px;
+            width: 100%;
+            position:absolute;
+            top:10px;
+            text-align: center;
+            color:white;
+        }
+        @keyframes move2 {
+            from 
+            {
+                transform: translateX(500px);
+            }
+            to 
+            {
+                transform: translateY(px);
+            }
+            
+        }
+        input 
+        {
+            padding:7px;
+        }
+        input[type="submit"]
+        {
+            padding:7px 20px;
+            font-weight: bold;
+        }
+
+        @media only screen and (max-width: 600px) {
+           #signuppagesection
+            {
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbDsOtUzzbO7n8FLJjmsv1aB3tJ5RP2f9s5h5lpa6jeUAT-2b0w_9AFZIj&s=10");
+                justify-content: center;
+            }
+            h1 
+            {
+                text-align: center;
+                color:red;
+            }
+            #wish 
+            {
+                z-index: 20;
+            }
+             @keyframes move2 {
+            from 
+            {
+                transform: translateY(-500px);
+            }
+            to 
+            {
+                transform: translateY(0px);
+            }
+            
+        }
+            
+
+            
+}
+
+        
+
+     
+      */

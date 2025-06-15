@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #121212;
+  color: white;
+}
+
+
+#details {
+  width: 100%;
+  min-height: 100dvh;
+  padding: 30px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+
+#image {
+  width: 300px;
+  height: 450px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+#image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+#movie_details {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  padding: 10px;
+}
+
+#movie_details h2 {
+  font-size: 20px;
+  color: #ddd;
+  border-bottom: 1px solid #333;
+  padding-bottom: 5px;
+}
+
+#movie_details button {
+  margin-top: 10px;
+  background-color: #00ff00;
+  color: black;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 10px #00ff00;
+  transition: background-color 0.3s ease;
+}
+
+#movie_details button:hover {
+  background-color: #00cc00;
+}
+
+
+#video {
+  width: 100%;
+  /* max-width: 960px; */
+  height: 500px;
+  margin: 40px auto 20px auto;
+  display: block;
+  border: none;
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px rgba(0, 255, 0, 0.4); */
+}
+
+
+@media (max-width: 768px) {
+  #details {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  #image {
+    width: 90%;
+    height: auto;
+    max-height: 400px;
+  }
+
+  #movie_details {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  #video {
+    height: 240px;
+    width: 100%;
+  }
+} 
+
+
+
+
+
+/* #details 
+{
+    width:100%;
+    height:100dvh;
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 40px;
+    justify-content: space-evenly;
+}
+#details div 
+{
+    position:relative;
+    width:40%;
+    height: 80%;
+    border:10px solid black;
+}
+#details div:nth-child(1) img 
+{
+    position:absolute;
+    width:100%;
+    height: 100%;
+}
+#details #movie_details 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+#details #movie_details button 
+{
+    background-color: blue;
+    color:white;
+    outline: none;
+    padding:10px 30px;
+} */
