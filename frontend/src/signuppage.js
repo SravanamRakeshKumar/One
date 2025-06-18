@@ -30,10 +30,14 @@ function Signup()
               alert("Account created successful!");
               navigate("/home")
             }
+            else 
+            {
+              alert(responce.data.message)
+            }
   
         }catch(error)
         {
-          console.log(error)
+          console.log("error="+error)
         }
 
        }

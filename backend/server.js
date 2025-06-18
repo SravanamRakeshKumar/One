@@ -24,11 +24,9 @@ app.get("/movies", (req, res) => {
 });
 
 mongoose.connect(MONGODB_CLOUD_URL)
-.then(() => {
-  console.log("✅ MongoDB Connected");
-}).catch((err) => {
-  console.error("❌ MongoDB Connection Failed", err);
-});
+.then(() => console.log("✅ MongoDB Connected to Atlas"))
+.catch((err) => console.error("❌ MongoDB Connection Error:", err));
+
 
 const userSchema = new mongoose.Schema({
   username: String,
@@ -93,5 +91,5 @@ app.post("/api/create-order", async (req, res) => {
 
 
 app.listen(PORT, () => {
-  console.log("Express server running on port 3003");
+  console.log("Express server running on port 5000");
 });
