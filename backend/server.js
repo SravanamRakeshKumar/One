@@ -24,20 +24,16 @@ app.get("/movies", (req, res) => {
 });
 
 
-app.patch("/movies/:id", (req, res) => {
+app.get("/movies/:id", (req, res) => {
   const movieId = req.params.id;
-  const { seats_booked } = req.body;
-
   const movie = movies.movies.find(m => m.id === movieId);
-
+  
   if (movie) {
-    movie.seats_booked = seats_booked; // update seats
-    res.json({ message: "Seats updated successfully", movie });
+    res.send(movie);
   } else {
-    res.status(404).json({ message: "Movie not found" });
+    res.status(404).send({ message: "Movie not found" });
   }
 });
-
 mongoose.connect(MONGODB_CLOUD_URL)
 .then(() => console.log("✅ MongoDB Connected to Atlas"))
 .catch((err) => console.error("❌ MongoDB Connection Error:", err));
