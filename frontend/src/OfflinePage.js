@@ -72,7 +72,7 @@ function Offline()
         handler: async function () { 	 //it is activate after payment is done
           window.location.href="/home";  //relocate the homepage 
           alert("✅ Payment send Successful!seats are booking"); //conformation purpose
-           const data=axios.patch(`${API_URL}/movies/${movie_details.id}`, 
+           const data=axios.patch(`${API_URL}movies/${movie_details.id}`, 
             {
                   seats_booked: seats,  //updated seats_booked property
           }
