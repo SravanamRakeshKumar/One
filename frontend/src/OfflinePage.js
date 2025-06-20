@@ -18,6 +18,8 @@ function Offline()
     }
     ,[]);
 
+    console.log(movie_details._id)
+
     useEffect(()=>{
       if (movie_details?.seats_booked)
       {
@@ -56,8 +58,6 @@ function Offline()
       if (count>=1)
       {
 
-
-
       const { data: order } = await axios.post(`${API_URL}api/create-order`, {
                   amount: total,
                 });
@@ -69,34 +69,21 @@ function Offline()
         name: "HomeTheatre",
         description: "Test Transaction",
         order_id: order.id,
-        handler: async function () { 	 //it is activate after payment is done
+        handler: async function () { 
+          // event.preventDefault();	 //it is activate after payment is done
           window.location.href="/home";  //relocate the homepage 
-          alert("✅ Payment send Successful!seats are booking"); //conformation purpose
-           const data=axios.patch(`${API_URL}movies/${movie_details.id}`, 
+          alert("✅ Payment send Successful!seats are booking");
+          // console.log("seats=",seats) //conformation purpose
+           const data=axios.patch(`${API_URL}movies/${movie_details._id}`, 
             {
-                  seats_booked: seats,  //updated seats_booked property
+                  seats_booked: seats, 
+                //updated seats_booked property
           }
                                               );
         }
       }
          const rzp = new window.Razorpay(options);
            rzp.open();
-
-
-
-
-      // const data=axios.patch(`http://localhost:3000/movies/${movie_details.id}`, 
-      //       {
-      //             seats_booked: seats,  //updated seats_booked property
-      //     }
-      //                                         );
-
-      // console.log(seats);
-      //  if(window.confirm("are you sure to book tickets"))
-      //  {
-
-      //      alert("seats booking completed!")
-      //  }
     }
     else 
     {

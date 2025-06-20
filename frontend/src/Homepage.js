@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import {Link} from 'react-router-dom'
 import './HomePageStyles.css';
+import axios from "axios";
 
 function Homepage()
 {
@@ -23,12 +24,25 @@ function Homepage()
         .then(res =>res.json())
         .then( data => 
             {
-                setMovies(data.movies);
-                setFilterMovies(data.movies)
+                setMovies(data);
+                setFilterMovies(data)
 
     })   //movies
 
     },[]);
+
+
+
+    useEffect(() => {
+  axios.get(`${API_URL}movies`)
+    .then(res => {
+      setMovies(res.data); // ✅ ensure the structure matches your API response
+    })
+    .catch(err => {
+      console.error("Failed to fetch movies", err);
+    });
+}, []);
+
 
     useEffect(()=>
     {
